@@ -63,27 +63,29 @@ let write_index = posts => {
     );
 };
 
-if(process.argv.length > 2) {
-    /**
-     * Argv 3 is a path to a JSON file that contains an array in the following format:
-     * [
-     *   {
-     *       filename: "my_post.md"
-     *       tags: ["tag1", "tag two"],
-     *   }
-     * ]
-     */
-    let posts = require(process.argv[3]);
+fs.readFile('template.html', 'utf8', (error, text) => {
+    error && log_error(error);
 
-    handle_files(null, posts.map(e => e.filename));
-    write_index(posts);
-} else {
-    fs.readFile('template.html', 'utf8', (error, text) => {
-        error && log_error(error);
+    template_html = text;
 
-        template_html = text;
+    if(process.argv.length > 2) {
+        /**
+         * Argv 3 is a path to a JSON file that contains an array in the following format:
+         * [
+         *   {
+         *       filename: "my_post.md"
+         *       tags: ["tag1", "tag_two"],
+         *   }
+         * ]
+         */
+        let posts = require(process.argv[2]);
 
+        handle_files(null, posts.map(e => e.filename));
+        write_index(posts);
+    } else {
         fs.readdir(source, handle_files);
-    });
-}
+    }
+});
+
+
 

@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "dead_easy": "node index.js",
-    "easy": "node index.js template.json"
+    "easy": "node index.js ./template.json"
   },
   "repository": {
     "type": "git",
