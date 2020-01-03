@@ -1,7 +1,7 @@
 {
   "name": "dead_easy_blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "A markdown blog, compiled via node.js. As ez as possible.",
   "main": "index.js",
   "dependencies": {
     "showdown": "^1.9.1"
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sacdallago/sacdallago.github.io.git"
+    "url": "git+https://github.com/sacdallago/dead_easy_blog.git"
   },
   "author": "Christian Dallago <code@dallago.us> (https://github.com/sacdallago)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sacdallago/sacdallago.github.io/issues"
+    "url": "https://github.com/sacdallago/dead_easy_blog/issues"
   },
-  "homepage": "https://github.com/sacdallago/sacdallago.github.io#readme"
+  "homepage": "https://github.com/sacdallago/dead_easy_blog#readme"
 }
